@@ -1,0 +1,68 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<nav class="ui inverted menu">
+  <header class="header item"> Spacebook </header>
+  <div class="right menu">
+    <a class="active item" href="/home">Home</a></li>
+    <a class="item" href="/members">Members</a>
+    <a class="item" href="/profile">Profile</a>
+    <a class="item" href="/logout">Logout</a>
+  </div>
+</nav> 
+
+<h1 class="ui inverted teal block header" >${user.firstName} ${user.lastName}</h1>
+<section class="ui two column grid segment">
+  <div class="row">
+    <div class="ui column">
+      <section class="ui stacked segment">
+        <h4 class="ui inverted red block header">Friends (${user.friendships.size()})</h4>
+        <div class="ui list"> 
+          #{list items:user.friendships, as:'friendship'}
+            <div class="ui item"> 
+              <i class="user icon"></i>
+              <a href="/publicprofile/${friendship.targetUser.id}"> ${friendship.targetUser.firstName} ${friendship.targetUser.lastName} </a>
+               (<a href="/home/drop/${friendship.targetUser.id}"> drop </a>)
+            </div>
+          #{/list}
+        </div> 
+      </section>  
+    </div>
+    <div class="column">
+      <section class="ui stacked segment">
+        <h4 class="ui inverted blue block header">Messages</h4>
+        #{if user.inbox.size() > 0}
+          <table class="ui table segment">
+            <thead>
+              <tr>
+                <th>From</th>
+                <th></th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              #{list items:user.inbox, as:'message'}
+                <tr>
+                  <td>
+                    <div class="ui small image">
+                      <img src="/profile/getpicture/${message.from.id}">
+                    </div>
+                  </td>
+                  <td>
+                     <a href="/publicprofile/${message.from.id}"> ${message.from.firstName}</a>
+                   </td>
+                   <td> 
+                      ${message.messageText}
+                    </td>
+                </tr>
+              #{/list}
+            </tbody>
+          </table>  
+        #{/if} 
+      </section>
+    </div>
+  </div>
+</section>
+
+
+ 

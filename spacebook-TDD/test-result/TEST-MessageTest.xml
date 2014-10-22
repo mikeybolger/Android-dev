@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="0" time="0.018" errors="0" skipped="0" tests="4" name="MessageTest">
+  <testcase classname="MessageTest" name="testMultipleMessages" time="0.007">
+      </testcase>
+  <testcase classname="MessageTest" name="testNoMessagese" time="0.002">
+      </testcase>
+  <testcase classname="MessageTest" name="testCreateMessage" time="0.004">
+      </testcase>
+  <testcase classname="MessageTest" name="testAddDeleteMessage" time="0.005">
+      </testcase>
+</testsuite>

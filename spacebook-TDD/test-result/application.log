@@ -1,0 +1,59 @@
+22 Oct 2014 10:27:48,270 INFO  ~ Starting C:\dev\ws\spacebook-TDD
+22 Oct 2014 10:27:49,161 WARN  ~ You're running Play! in DEV mode
+22 Oct 2014 10:27:49,692 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+22 Oct 2014 10:28:07,541 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+22 Oct 2014 10:28:08,892 INFO  ~ Application 'spacebook-TDD' is now started !
+22 Oct 2014 11:58:26,845 ERROR ~ 
+
+@6k1571jab
+Internal Server Error (500) for request GET /@tests/init
+
+Compilation error (In /test/MessageTest.java around line 70)
+The file /test/MessageTest.java could not be compiled. Error raised is : joan cannot be resolved to a variable
+
+play.exceptions.CompilationException: joan cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:281)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:324)
+	at play.Play.detectChanges(Play.java:632)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+22 Oct 2014 11:58:26,916 ERROR ~ 
+
+@6k1571jac
+Internal Server Error (500) for request GET /@tests/end?result=passed
+
+Compilation error (In /test/MessageTest.java around line 70)
+The file /test/MessageTest.java could not be compiled. Error raised is : joan cannot be resolved to a variable
+
+play.exceptions.CompilationException: joan cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:281)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:324)
+	at play.Play.detectChanges(Play.java:632)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+22 Oct 2014 11:58:26,965 ERROR ~ 
+
+@6k1571jad
+Internal Server Error (500) for request GET /@tests?select=BasicTest.class,MessageTest.class,UserTest.class,ApplicationTest.class
+
+Compilation error (In /test/MessageTest.java around line 70)
+The file /test/MessageTest.java could not be compiled. Error raised is : joan cannot be resolved to a variable
+
+play.exceptions.CompilationException: joan cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:281)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:324)
+	at play.Play.detectChanges(Play.java:632)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
